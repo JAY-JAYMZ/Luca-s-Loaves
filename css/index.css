@@ -1,0 +1,75 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; 
+    font-family: Arial, sans-serif;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/index/1.JPG');
+    background-size: cover; 
+    filter: blur(10px); 
+    z-index: -1; 
+}
+
+.welcome-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.welcome-image {
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    max-width: calc(75% - 40px); 
+    max-height: calc(75% - 40px); 
+    z-index: 1; 
+   
+}
+
+.prompt-and-button {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, 30%); 
+    text-align: center;
+    z-index: 2; 
+    padding: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+   
+}
+
+.prompt-and-button p {
+    font-size: 30px; 
+    margin: 0; 
+    color: #FFFFFF; 
+    text-shadow: 0 0 5px #007BFF, 0 0 10px #007BFF, 0 0 15px #007BFF; 
+}
+
+.prompt-and-button button {
+    margin-top: 15px; 
+    padding: 10px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px; 
+    background-color: #007BFF;
+    color: white; 
+    transition: background-color 0.3s ease; 
+}
+
+.prompt-and-button button:hover {
+    background-color: #1abc9c; 
+}
+

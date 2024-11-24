@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administrator Panel</title>
+  <link rel="stylesheet" href="css/001.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to the distinguished admin</h1>
+  </header>
+  <main>
+    <div class="grid">
+      <div class="card">
+        <button onclick="navigateTo('admin-customer.php')">Customer</button>
+      </div>
+      <div class="card">
+        <button onclick="navigateTo('admin-Administrator.php')">Administrator</button>
+      </div>
+      <div class="card">
+        <button onclick="navigateTo('admin-order.php')">Order</button>
+      </div>
+      <div class="card">
+        <button onclick="navigateTo('admin-Menu.php')">Menu</button>
+      </div>
+    </div>
+    <div class="logout-container">
+      <a href="Home.html" target="_blank" class="logout-button">Go to home page</a>
+      <br>
+      <a href="logout.php" class="logout-button">Logout</a>
+    </div>
+  </main>
+  <script src="js/admin.js"></script>
+</body>
+</html>

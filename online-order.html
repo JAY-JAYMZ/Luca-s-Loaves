@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>online-order - Luca's Loaves</title>
+    <link rel="stylesheet" href="css/All.css">
+
+    <style>
+        .header {
+    text-align: center;
+    padding: 20px;
+    background-color: #1abc9c;
+    color: white;
+    }
+
+    .welcome-text {
+    font-size: 2rem;
+    animation: glow 1.5s infinite alternate;
+    }  
+
+    @keyframes glow {
+    from {
+        text-shadow: 0 0 5px white, 0 0 10px white;
+    }
+    to {
+        text-shadow: 0 0 10px gold, 0 0 20px gold;
+    }
+    }
+
+    .menu-section, .order-section {
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+    }
+
+    table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    }
+
+    table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    }
+
+    table th {
+    background-color: #1abc9c;
+    color: white;
+    }
+
+    .total-price {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 20px 0;
+    }
+
+    button {
+    padding: 10px 20px;
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    }
+
+    button:hover {
+    background-color: #1abc9c;
+    }
+    </style>
+
+</head>
+<body>
+   
+    <div class="top-bar">
+        <div class="container">
+            <div class="left-info">
+                <span>JAYMZ</span>
+                <span>Email: <a href="info@lucasloaves.com.au ">info@lucasloaves.com.au </a></span>
+            </div>
+            <div class="right-info">
+                <span>Phone: Australia phone number</span>
+                <span><button class="dropdown-button">beautification</button></span>
+            </div>
+        </div>
+    </div>
+
+    
+    <header class="main-header">
+        <div class="container">
+            <div class="logo-container">
+                <img src="img/logo.png" alt="Logo" class="logo">
+                <h1 class="site-title">Luca's Loaves</h1>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="Careers.html">Careers</a></li>
+                    <li><a href="online-order.html">Online Order</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    
+
+    
+    <div class="header">
+        <h1 class="welcome-text">Welcome to choose and buy</h1>
+        <h2 id="user-email"></h2>
+    </div>
+
+    <div class="menu-section">
+        <h2>Menu</h2>
+        <table id="menu-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Photo</th>
+                    <th>Dish</th>
+                    <th>Price</th>
+                    <th>Ingredient</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php include 'menu.php'; ?>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="order-section">
+        <h2>Order Summary</h2>
+        <table id="order-table">
+            <thead>
+                <tr>
+                    <th>Dish</th>
+                    <th>Quantity</th>
+                    <th>Subtotal Price</th>
+                    <th>Ingredient</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Orders will be dynamically added here -->
+            </tbody>
+        </table>
+        <div class="total-price">
+            <h3>Total Price: $<span id="total-price">0.00</span></h3>
+        </div>
+        <button id="submit-order">Submit Order</button>
+    </div>
+
+    <script src="js/online-order.js"></script>
+
+
+
+
+    
+
+
+    
+    
+    <!-- footer -->
+    <footer>
+        <p>© 2024 JAY's Restaurant - Luca's Loaves. All rights reserved. 
+           <a href="logout.php">(LOG OUT)</a>
+        </p>
+        <div class="social-links">
+            <a href="#" class="facebook">Facebook</a>
+            <a href="#" class="instagram">Instagram</a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,389 @@
+/* JAY JAYMZ 223190722 3198943307@qq.com */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* top */
+.top-bar {
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+    padding: 5px 0;
+}
+
+.top-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-bar .left-info span,
+.top-bar .right-info span {
+    margin-right: 15px;
+}
+
+.top-bar a {
+    color: #1abc9c;
+}
+
+.dropdown-button {
+    background-color: #1abc9c;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* navbar */
+.main-header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+}
+
+.site-title {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    color: #333;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #1abc9c;
+    color: #fff;
+}
+
+.social-icons a {
+    margin-left: 15px;
+    font-size: 16px;
+}
+/* navbar */
+
+main {
+    padding: 20px;
+    min-height: calc(100vh - 160px); 
+}
+
+
+/* home */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body, html {
+    width: 100%;
+    height: 100%;
+  }
+
+  main {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* 页面高度全屏 */
+    overflow: hidden;
+  }
+
+  .slider {
+    display: flex;
+    width: 140%; /* 三张图片并排 */
+    height: 100%;
+    animation: slide 9s infinite;
+  }
+
+  .slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    background-size: cover; /* 填充图片 */
+    background-position: center;
+    transform: scale(1);
+    animation: zoom 3s infinite;
+  }
+
+  @keyframes slide {
+    0%, 33.33% { transform: translateX(0); }
+    33.34%, 66.66% { transform: translateX(-100%); }
+    66.67%, 100% { transform: translateX(-200%); }
+  }
+
+  @keyframes zoom {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+
+  /* 信息框样式 */
+  .info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    width: 30%;
+    font-size: 18px;
+    z-index: 10; /* 确保在图片上层 */
+  }
+
+  .info h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+
+  .info p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .info:hover {
+    background: rgba(255, 255, 255, 0.8);
+    color: black;
+    cursor: pointer;
+  }
+
+  /* 序号指示器样式 */
+  .indicator {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    font-size: 50px;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 50px 100px;
+    border-radius: 30px;
+    z-index: 10; /* 确保在图片上层 */
+  }
+
+  .indicator:hover {
+    background: rgba(255, 255, 255, 0.8);
+    color: black;
+    cursor: pointer;
+  }
+
+/* home */
+
+
+
+
+/* about-us */
+ section {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+section img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+.map {
+    text-align: center;
+    margin: 20px 0;
+}
+.map img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.team-card {
+    background: #e9c46a;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 200px;
+    text-align: center;
+}
+.team-card img {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+}
+.team-card h3 {
+    margin: 10px 0 5px;
+}
+.team-card p {
+    padding: 0 10px 10px;
+    font-size: 0.9em;
+}
+.team-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    animation: glow 1.5s infinite;
+}
+@keyframes glow {
+    0% { box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+    50% { box-shadow: 0 8px 12px rgba(255, 223, 186, 0.6); }
+    100% { box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+}
+
+/* about-us */
+
+
+ 
+/* Careers */
+
+section {
+    background: white;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    color: #2a9d8f;
+    margin-top: 0;
+}
+
+p {
+    margin: 10px 0;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+button {
+    background-color: #2a9d8f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #21867a;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.flex-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.flex-container .flex-item {
+    flex: 1;
+    min-width: 280px;
+}
+
+/* Careers */
+
+
+
+
+
+
+
+/* footer */
+footer {
+    background-color: #343a40; /* 页脚背景色与页眉一致 */
+    color: white;
+    text-align: center;
+    padding: 15x;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 0;
+    line-height: 2;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+footer .social-links {
+    margin-top: 2px;
+}
+
+footer .social-links a {
+    margin: 0 12px;
+    color: white;
+    font-size: 10px;
+}
+
+footer .social-links a:hover {
+    color: #007bff;
+}

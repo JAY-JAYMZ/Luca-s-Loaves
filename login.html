@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login.css" />
+    <script>
+        // 当页面加载时，清除localStorage中的数据
+        window.onload = function() {
+            localStorage.clear();
+        };
+
+        // 当用户点击登录按钮时，保存邮箱到localStorage
+        function saveEmailToLocalStorage(event) {
+            // 阻止默认表单提交行为
+            event.preventDefault();
+
+            // 获取邮箱输入框的值
+            var emailInput = document.getElementById('email');
+            var email = emailInput.value;
+
+            // 检查localStorage是否可用
+            if (typeof Storage !== "undefined") {
+                // 保存邮箱到localStorage
+                localStorage.setItem('userEmail', email);
+                console.log("Email saved to localStorage: " + email);
+            } else {
+                console.error("localStorage is not available in this browser.");
+            }
+
+            // 手动提交表单
+            document.forms[0].submit();
+        }
+    </script>
+</head>
+<body>
+    <div class="box">
+        <div class="left"></div>
+        <div class="right">
+            <h4>Login</h4>
+            <!-- 表单数据提交到login.php，并在提交前调用saveEmailToLocalStorage函数 -->
+            <form action="login.php" method="post" onsubmit="saveEmailToLocalStorage(event)">
+                <input class="acc" type="text" id="email" name="email" required placeholder="Email" />
+                <input class="acc" type="password" id="pwd" name="password" required placeholder="Password" />
+                <input class="submit" type="submit" id="log" name="login" value="Login" />
+            </form>
+            <div class="down">
+                <a href="Register.html">Register</a>
+                <a href="index.html">BACK</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

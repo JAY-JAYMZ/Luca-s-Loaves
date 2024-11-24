@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="css/Register.css" />
+    <script>
+        function validateForm() {
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            if (password.length < 6) {
+                alert("Password must be at least 6 characters long.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div class="box">
+        <div class="left"></div>
+        <div class="right">
+            <h4>Register</h4>
+            <form action="register.php" method="post" onsubmit="return validateForm()">
+                <input class="acc" type="text" name="first_name" required placeholder="First Name" />
+                <input class="acc" type="text" name="last_name" required placeholder="Last Name" />
+                <input class="acc" type="text" name="phone" placeholder="Phone Number" />
+                <input class="acc" type="email" id="email" name="email" required placeholder="Email" />
+                <input class="acc" type="password" id="password" name="password" required placeholder="Password" />
+                <input class="acc" type="text" name="address" placeholder="Address" />
+                <input class="acc" type="text" name="city" placeholder="City" />
+                <input class="acc" type="date" name="date_of_birth" placeholder="Date of Birth" />
+                <input class="acc" type="text" name="produce_preferences" placeholder="Produce Preferences" />
+                <input class="submit" type="submit" value="Register" />
+            </form>
+        </div>
+    </div>
+</body>
+</html>
